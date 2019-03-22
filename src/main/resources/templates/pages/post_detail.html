@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>分页</title>
+</head>
+<body>
+<!--分页-->
+<div th:replace="~{home/fragments/page::header-page"}></div>
+<!--/分页-->
+</body>
+<script th:inline="javascript">
+    var postId=[[${post.id}]];
+    var postUrl='/'+[[${post.user.username}]]+'/posts/'+[[${posts.id}]];
+</script>
+</html>

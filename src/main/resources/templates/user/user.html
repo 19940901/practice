@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+</head>
+<body>
+<h2>user list</h2>
+<div>
+
+    <ul>
+        <li th:each="people:${peoples}">
+           <span>name : </span> <span th:text="${people.name}"></span><br/>
+            <span>age : </span><span th:text="${people.age}"></span><br/>
+            <span>house.address : </span><span th:text="${people.house.address}"></span><br/>
+            <span>house.size : </span><span th:text="${people.house.size}"></span><br/>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
